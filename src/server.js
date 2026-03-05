@@ -2,6 +2,7 @@ import express from "express";
 import "dotenv/config";
 import authRouter from "./routes/auth.routes.js";
 import userRouter from "./routes/user.routes.js";
+import dessertRouter from "./routes/dessert.routes.js";
 
 const app = express();
 const PORT = process.env.PORT;
@@ -16,10 +17,7 @@ app.use('/auth', authRouter);
 
 app.use('/users', userRouter);
 
-app.use('/desserts', (re, res) => {
-    res.send('desserts service');
-
-});
+app.use('/desserts', dessertRouter);
 
 app.use('/reviews', (re, res) => {
     res.send('reviews service');

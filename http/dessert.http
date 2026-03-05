@@ -1,14 +1,25 @@
 @BASE_URL=http://localhost:5000
+@TOKEN = {{login.response.body.user.token}}
+
+### login
+# @name login
+POST {{BASE_URL}}/auth/login
+Content-Type: application/json
+
+{
+    "email": "test@gmail.com",
+    "password": "12345"
+}
 
 ### get deserts
 GET {{BASE_URL}}/desserts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJwYW4xIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzI1MjE0NzQsImV4cCI6MTc3MjUyNTA3NH0.BaaAzJe5oLItBQohrYCRrWPO0MLtk-zlOFNh3EbnQjY
+Authorization: Bearer {{TOKEN}}
 
 ### post desert
 POST {{BASE_URL}}/desserts
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MjUyMjIxMiwiZXhwIjoxNzcyNTI1ODEyfQ.pjzF4sftKTwPKoJ4fgRHIWIVpcUHFoNNtY1JiRJEu9s
+Authorization: Bearer {{TOKEN}}
 
 {
   "name": "Matcha Cake5",
@@ -19,4 +30,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hb
 ### delete deserts
 DELETE  {{BASE_URL}}/desserts/1
 Content-Type: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MjUyMjIxMiwiZXhwIjoxNzcyNTI1ODEyfQ.pjzF4sftKTwPKoJ4fgRHIWIVpcUHFoNNtY1JiRJEu9s
+Authorization: Bearer {{TOKEN}}

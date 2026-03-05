@@ -21,6 +21,7 @@ export async function registerController(re, res, next) {
 }
 
 export async function loginController(re, res, next) {
+    // validate if not email found, throw readable human error
     const {email, password} = re.body;
  
     try {

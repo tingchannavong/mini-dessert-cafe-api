@@ -6,8 +6,8 @@ POST {{BASE_URL}}/auth/register
 Content-Type: application/json
 
 {
-    "email": "tes@gmail.com",
-    "username": "Testr",
+    "email": "test@gmail.com",
+    "username": "Tester",
     "role": "ADMIN",
     "password": "12345"
 }
@@ -33,5 +33,6 @@ Content-Type: application/json
 
 {
   "username": "pan_5th",
-  "email": "peterpan@mail.com"
+  "email": "peterpan@mail.com",
+  "role": "ADMIN"
 }
