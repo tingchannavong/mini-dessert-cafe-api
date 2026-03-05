@@ -55,5 +55,23 @@ export async function verifyUser(email, password) {
      };
 }
 
+// flexible edit methods where no matter how many fields is sent those will be updated
+export async function editUser(id, { email, username, password, role }) {
+    const data = {};
 
+    if (email) data.email = email;
+    if (username) data.username = username;
+    
+    if (password) {
+        data.password = await bcrypt.hash(password, 5);
+    }
 
+    if (role) data.role = role;
+
+    const result = await prisma.user.update({
+        where: { id },
+        data: data
+    });
+
+    return result;
+}

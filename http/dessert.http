@@ -1,0 +1,22 @@
+@BASE_URL=http://localhost:5000
+
+### get deserts
+GET {{BASE_URL}}/desserts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwidXNlcm5hbWUiOiJwYW4xIiwicm9sZSI6IlVTRVIiLCJpYXQiOjE3NzI1MjE0NzQsImV4cCI6MTc3MjUyNTA3NH0.BaaAzJe5oLItBQohrYCRrWPO0MLtk-zlOFNh3EbnQjY
+
+### post desert
+POST {{BASE_URL}}/desserts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MjUyMjIxMiwiZXhwIjoxNzcyNTI1ODEyfQ.pjzF4sftKTwPKoJ4fgRHIWIVpcUHFoNNtY1JiRJEu9s
+
+{
+  "name": "Matcha Cake5",
+  "price": 140,
+  "category": "cake"
+}
+
+### delete deserts
+DELETE  {{BASE_URL}}/desserts/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NSwidXNlcm5hbWUiOiJhZG1pbiIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc3MjUyMjIxMiwiZXhwIjoxNzcyNTI1ODEyfQ.pjzF4sftKTwPKoJ4fgRHIWIVpcUHFoNNtY1JiRJEu9s

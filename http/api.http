@@ -25,3 +25,13 @@ Content-Type: application/json
 ### get me
 GET {{BASE_URL}}/users/me
 Authorization: Bearer {{ACCESS_TOKEN}}
+
+### get me
+PUT {{BASE_URL}}/users/me
+Authorization: Bearer {{ACCESS_TOKEN}}
+Content-Type: application/json
+
+{
+  "username": "pan_5th",
+  "email": "peterpan@mail.com"
+}
