@@ -1,17 +1,19 @@
 @BASE_URL=http://localhost:5000
+@ACCESS_TOKEN = {{login.response.body.user.token}}
 
 ### register
 POST {{BASE_URL}}/auth/register
 Content-Type: application/json
 
 {
-    "email": "test@gmail.com",
-    "username": "Tester",
+    "email": "tes@gmail.com",
+    "username": "Testr",
     "role": "ADMIN",
     "password": "12345"
 }
 
 ### login
+# @name login
 POST {{BASE_URL}}/auth/login
 Content-Type: application/json
 
@@ -19,3 +21,7 @@ Content-Type: application/json
     "email": "test@gmail.com",
     "password": "12345"
 }
+
+### get me
+GET {{BASE_URL}}/users/me
+Authorization: Bearer {{ACCESS_TOKEN}}

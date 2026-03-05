@@ -6,6 +6,8 @@ import userRouter from "./routes/user.routes.js";
 const app = express();
 const PORT = process.env.PORT;
 
+app.use(express.json());
+
 app.get('/', (re, res) => {
     res.send('Welcome to mini dessert cafe XD');
 });
